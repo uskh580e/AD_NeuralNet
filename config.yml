@@ -1,0 +1,40 @@
+# config.yml
+dataset:
+  train: '/12tb_dsk1/usman/Pytorch_Biologically_Informed_Neural_Network/Preprocessed_data/excitory_neurons/Exc_L5_6_RORB_LINC02196/train.csv'
+  test: '/12tb_dsk1/usman/Pytorch_Biologically_Informed_Neural_Network/Preprocessed_data/excitory_neurons/Exc_L5_6_RORB_LINC02196/test.csv'
+  val: '/12tb_dsk1/usman/Pytorch_Biologically_Informed_Neural_Network/Preprocessed_data/excitory_neurons/Exc_L5_6_RORB_LINC02196/val.csv'
+  y_train: '/12tb_dsk1/usman/Pytorch_Biologically_Informed_Neural_Network/Preprocessed_data/excitory_neurons/Exc_L5_6_RORB_LINC02196/y_train.csv'
+  y_test: '/12tb_dsk1/usman/Pytorch_Biologically_Informed_Neural_Network/Preprocessed_data/excitory_neurons/Exc_L5_6_RORB_LINC02196/y_test.csv'
+  y_val: '/12tb_dsk1/usman/Pytorch_Biologically_Informed_Neural_Network/Preprocessed_data/excitory_neurons/Exc_L5_6_RORB_LINC02196/y_val.csv'
+
+
+model_output: 
+  model_save_dir: '/12tb_dsk1/usman/Pytorch_Biologically_Informed_Neural_Network/model_save/excitory_neurons/Exc_L5_6_RORB_LINC02196/'
+
+train:
+  epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  batch_size: 1024
+
+gene_expression:
+  highly_expressed_threshold: 0.95
+  lowly_expressed_threshold: 0.95
+  normalization: True
+  marker: True
+  print_information: True
+
+pathways_network:
+  species: 'human'
+  n_hidden_layer: 3
+  pathway_relation: '../../usman/CellTICS/reactome/ReactomePathwaysRelation.txt'
+  pathway_names: '../../usman/CellTICS/reactome/ReactomePathways.txt'
+  ensemble_pathway_relation: '../../usman/CellTICS/reactome/Ensembl2Reactome_All_Levels.txt'
+  datatype: 'diagnosis'
+  h_thresh: 1
+  l_thresh: 0
+  pathway_relation_updated: '../../usman/CellTICS/reactome/Subset_reactomePathwaysRelation.txt'
+  ensemble_pathway_relation_updated: '../../usman/CellTICS/reactome/Subset_Ensembl2Reactome_All_Levels.txt'
+
+
+
